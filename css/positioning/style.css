@@ -1,8 +1,28 @@
-.stupid {
+.octo {
+	position: relative;
+    margin: auto;
+    width: 200px;
+    width: 60%;
+    padding-top: 100px;
 
-  background-color: #e9e5dc;
-  border-radius: 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
 
+#octopus {
+	position: absolute;
+    left: 20px;
+    top: 50px;
+	z-index: -2;
+
+}
+#hat {
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	z-index: -1;
+}
+
+#glasses {
+	position: absolute;
+    left: 60px;
+    top: 150px;
+}
