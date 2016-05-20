@@ -47,8 +47,14 @@ figcaption {
   text-align: right;
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    background-color: hotpink;
+@media screen and (max-width: 480px) {
+  figure {
+    display: none;
   }
+
+  section#external-links {
+    display: block;
+    float: none;
+    width: 100%;
+    }
 }
