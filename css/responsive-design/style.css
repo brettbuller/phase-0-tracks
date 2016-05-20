@@ -1,5 +1,6 @@
 body {
-  width: 960px;
+  max-width: 960px;
+  min-width: 390px;
 }
 
 blockquote {
@@ -16,7 +17,7 @@ cite {
 section#external-links {
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  width: 20%;
 }
 
 #external-links ul {
@@ -24,7 +25,7 @@ section#external-links {
 }
 
 main {
-  width: 756px;
+  width: 78%;
   display:  inline-block;
   vertical-align: top;
 }
