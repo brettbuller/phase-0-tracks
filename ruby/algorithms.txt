@@ -1,0 +1,41 @@
+Robot Elevator Algorithm Task
+
+-Enter Elevator 
+-orientate front to face door
+-search left for floor control panel
+	-if yes, orientate to front of control panel
+	-if no, orientate to left of door to find control panel
+-query data set desired_floor
+	-return value
+	-if light for desired_floor is activated do nothing
+	-if light not activated push button
+-move to back corner of elevator 
+-shift head up to face floor counter display and lock gaze.  
+-If floor counter display shows desired_floor
+	-and doors open
+		-exit elevator 
+
+
+
+Real Life Algorith Task
+Making Coffee
+
+-Remove ground coffee from freezer
+	-if coffee in container proceed to coffee machine
+	-if no coffee rage quit 
+-Orientate to front of coffee machine
+-lift lid
+-remove filter
+-query data set desired_number_cups_coffee
+-return value
+-scoop value integer of coffee in to filter
+-replace filter in machine
+-pour returned value integer cups of water in to machine
+-close lid
+-Check to see if power light is on
+	-if no, plug machine power cord in to electrical socket
+	-if yes, press strength button = strong, button = brew now
+-Return ground coffee to freezer
+
+
+
