@@ -25,3 +25,15 @@ end
 if age != nil 
 	age = age.to_i
 end
+
+puts "Hamster is named #{name}."
+puts "#{name} has a volume level of #{volume} out of 10."
+puts "#{name} has a fur color of #{fur_color}."
+if candidate == true
+	puts "#{name} is a good candidate for adoption."
+elsif candidate == false 
+	puts "#{name} needs work and love."
+end 
+puts "#{name} is #{age} years old."
+
+
