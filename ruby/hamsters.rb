@@ -15,3 +15,13 @@ age = gets.chomp
 if age == ""
   age = nil
 end
+
+if candidate == "y"
+	candidate = true
+elsif  candidate == "n"
+	candidate = false
+end
+
+if age != nil 
+	age = age.to_i
+end
