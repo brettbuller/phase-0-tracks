@@ -12,12 +12,14 @@ def encrypt(input)
 			then input[n] = "a"
 			n += 1
 		else	
-	input[n] = input[n].next
-	n += 1
-	end	
-end
+			input[n] = input[n].next
+			n += 1
+		end	
+	end
 p input
 end
+# pseudocode got clipped by bond in the fight
+
 
 def decrypt(input)
 	n = 0
@@ -36,5 +38,7 @@ else answer = "encrypt"
 	encrypt(password)
 end
 # the p call returns the exact value which then gets input in the next def method as a string.  
+
+# code:
 
 

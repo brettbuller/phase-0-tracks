@@ -61,6 +61,7 @@ until number_employees == 0
 allergies = false
 
 until allergies
+<<<<<<< HEAD
 	puts "Please list out your allergies one by one, if done, type done"
 	answer = gets.chomp
 	if answer == "done"
@@ -70,6 +71,17 @@ until allergies
 		puts "Probably a vampire"
 		allergies = true
 	end
+=======
+  puts "Please list out your allergies one by one, if done, type done"
+  answer = gets.chomp
+  if answer == "done"
+    puts "thank you"
+    allergies = true
+  elsif answer == "sunshine"
+    puts "Probably a vampire"
+    allergies = true
+  end
+>>>>>>> 8b2c7462795d61fdca9768435ba061b0aaa154e2
 end 
 
   p name
