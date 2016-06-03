@@ -1,15 +1,4 @@
-puts "we need to change your name. What is your first name?"
 
-real_name = gets.chomp
-
-next_name = real_name.split (' ')
-# => ["James", "Bond"]
-
-new_fname = next_name[1]
-# new string "Bond"
-
-new_fname2 = new_fname.downcase!
-#new_fname2
 # take a name as a string.
 # make it an array and split the two names
 # create a new string with the first name and the last name
