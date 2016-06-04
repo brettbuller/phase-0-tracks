@@ -7,7 +7,7 @@
 # join the two together as new string
 # print the new alias
 
-puts "we need to change your name. What is your first name?"
+puts "we need to change your name. What is your real name?"
 
 real_name = gets.chomp
 
