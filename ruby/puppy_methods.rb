@@ -51,8 +51,8 @@ class Gymnast
 end
 team = []
 
-i = 0
-while  i < 4
+i = 1
+while  i < 51
 	participant =  "participant#{i}"
 	team << participant
 	i+=1
