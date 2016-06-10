@@ -1,14 +1,13 @@
 class Dachshund
-	# location, age, and ethnicity are readable as a getter method
-	attr_reader :name, :length, :color 
+	# location, age, and ethnicity are readable as a getter method, haven't needed this as all are attr_accessor
 	#name and gender are both readable and writable
-	attr_accessor :name, :length, :gender
+	attr_accessor :name, :length, :color, :toy
 
 	def initialize(name, length, color)
 		@name =  name
 		@length = length
 		@color = color
-		puts "Dachshund #{@name} engage!"
+		@toy = toy
 	end
 
 	def speak
@@ -16,6 +15,7 @@ class Dachshund
 	end
 
 	def fetch(toy)
+		@toy = toy
 		puts "Throw the #{toy}."
 		puts "***runs***"
 		puts "I brought back the #{toy}. It is now mine"
@@ -24,6 +24,10 @@ class Dachshund
 	def chase_squirrel
 		puts "Stop what you are doing, there is a squirrel that must be chased."
 	end
+
+	  def your_dog
+    puts "Your dachshund #{@name} is #{@length} inches long and #{@color} in color and loves you and its #{@toy}!"
+  	end
 end
 
 # hound = Dachshund.new("Chase", "12", "red")
@@ -31,27 +35,48 @@ end
 # hound.fetch("ball")
 # hound.chase_squirrel
 
-hound = []
+
 dog_kennel = []
 
 # creating the loop 
-puts "How many dachshunds are we rescuing today?"
-checknum = Integer(gets)
-currentnum = 0
+loop do
+	puts "You have a rescued a new Dachshund. What is its name?"
+		name = gets.chomp
 
-
-until checknum == currentnum
-	puts "You have a new Dachshund. What is its name?"
-		d_name = gets.chomp
-		hound << d_name
 	puts "How many inches long is it?"
-		d_inches = gets.chomp.to_i
-		hound << d_inches
+		length = gets.chomp.to_i
+
 	puts "What color is your long dog?"
-		d_color = gets.chomp
-		hound << d_color
-	checknum -=1
+		color = gets.chomp
+
+	puts "What is your dog's favorite toy?"
+		toy = gets.chomp
+	
+	puts "Are you happy with your dachshund? If so type 'rescue'!"	
+		input = gets.chomp
+	if input == "rescue"
+		hound = Dachshund.new(name, length, color)
+		hound.speak
+		hound.fetch(toy)
+		hound.chase_squirrel
+		dog_kennel << hound
+	else 
+		puts "just type 'rescue' your dachshund will love you all your life."
+		input = gets.chomp
+	end
+
+	puts "Hit enter to adopt another dachshund (please). If you're good with your number of dachshunds, please type 'done."
+  finish = gets.chomp
+  #exit infinite loop
+  break if finish == 'done'
 end
 
-# prints out each dachshund instance
-hound.each {|value| puts "#{value}"}
+# print the dog results
+dog_kennel.each do |hound|
+	hound.your_dog
+end
+
+
+
+
+
