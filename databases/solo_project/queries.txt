@@ -1,0 +1,50 @@
+1. Display the information in one table (either table is fine). 
+SELECT * FROM dachshund; 
+
+SQLite version 3.8.7.2 2014-11-18 20:57:56
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM dachshund;
+1|Chase|red|large
+2|Pumpkin|red|medium
+3|Turtle|brown and white|small
+4|Maudie|brown|extra large
+
+2. Update an item that meets some condition (you can choose a condition that makes sense). 
+UPDATE dachshund SET size="tweenie" WHERE name="Pumpkin";
+
+1|Chase|red|large
+2|Pumpkin|red|tweenie
+3|Turtle|brown and white|small
+4|Maudie|brown|extra large
+
+3. Display the information in both tables using one query.
+
+SELECT * FROM dachshund LEFT OUTER JOIN owner;
+1|Chase|red|large|1|Brett Buller
+1|Chase|red|large|2|Casey McPherson
+1|Chase|red|large|3|Lawrence Buller
+2|Pumpkin|red|tweenie|1|Brett Buller
+2|Pumpkin|red|tweenie|2|Casey McPherson
+2|Pumpkin|red|tweenie|3|Lawrence Buller
+3|Turtle|brown and white|small|1|Brett Buller
+3|Turtle|brown and white|small|2|Casey McPherson
+3|Turtle|brown and white|small|3|Lawrence Buller
+4|Maudie|brown|extra large|1|Brett Buller
+4|Maudie|brown|extra large|2|Casey McPherson
+4|Maudie|brown|extra large|3|Lawrence Buller
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+SELECT name, color FROM dachshund LEFT OUTER JOIN owner on dachshund.id = owner.id;
+Chase|red
+Pumpkin|red
+Turtle|brown and white
+Maudie|brown
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM dachshund WHERE name="Maudie";
+
+1|Chase|red|large
+2|Pumpkin|red|tweenie
+3|Turtle|brown and white|small
