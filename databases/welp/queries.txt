@@ -1,0 +1,20 @@
+RELEASE 2 ****
+2 & 3. You've joined two tables before. How do you join three? 
+
+SELECT users.firstname, users.lastname, businesses.name, reviews.stars, reviews.comment FROM users JOIN reviews ON users.id = reviews.users_id JOIN businesses ON businesses.id = reviews.business_id; 
+
+Brett|Buller|Google|4|would recommend
+Elizabeth|Lefever|Yahoo|5|best meal ever changed my life for the better
+Missy|Elliot|Microsoft|5|I love microsoft office
+Clark|Kent|Microsoft|2|apple all the way
+
+4. How do you view the data of all three tables for just one particular business? 
+
+SELECT users.firstname, users.lastname, businesses.name, reviews.stars, reviews.comment FROM users JOIN reviews ON users.id = reviews.users_id JOIN businesses ON businesses.id = reviews.business_id WHERE businesses.id = 3; 
+
+Missy|Elliot|Microsoft|5|I love microsoft office
+Clark|Kent|Microsoft|2|apple all the way
+
+RELEASE 3 *****
+
+
