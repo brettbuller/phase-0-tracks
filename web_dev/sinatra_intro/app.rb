@@ -72,10 +72,8 @@ end
 # A route that uses route parameters to add two numbers and 
 # respond with the result. The data types are tricky here -- 
 # when will the data need to be (or arrive as) a string?
-#http://localhost:4567/addition/:int_1/adds/:int_2
-get '/addition/' do
-	int_1 = params[:int_1]
-	int_2 = params[:int_2]
-	result = params[:int_1] + params[:int_2]
-	result
+#http://localhost:4567/:int_1/addition/int_2
+get '/:int_1/addition/:int_2' do
+	result = params[:int_1].to_i + params[:int_2].to_i
+	result.to_s
 end
