@@ -1,0 +1,30 @@
+<DOCTYPE! html>
+<html>
+<head>
+  <title>Where students are attending DBC</title>
+</head>
+<body>
+  <h1>Students by Campus Location</h1>
+
+  <h3>San Francisco</h3>
+  <ul>
+  <% @students_SF.each do |student| %>
+  <li><%= student['name'] %></li>
+  <% end %>
+  </ul>
+
+  <h3>Chicago</h3>
+  <ul>
+  <% @students_CHI.each do |student| %>
+  <li><%= student['name'] %></li>
+  <% end %>
+  </ul>
+
+  <h3>New York</h3>
+  <ul>
+  <% @students_NYC.each do |student| %>
+  <li><%= student['name'] %></li>
+  <% end %>
+  </ul>
+</body>
+</html>
